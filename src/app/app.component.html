@@ -443,10 +443,11 @@
             (out)="log($event)"
             (remove)="log($event)">
 
-            <ng-template let-model="model" let-template="template">
+            <ng-template let-model="model" let-template="template" let-index="index">
               <div [ngSwitch]="model.inputType">
                 <div *ngSwitchCase="'section'">
                    <ngx-section class="shadow" [sectionTitle]="model.name">
+                     index {{index}}
                      <ngx-dnd-container
                        dropZone="builder-target"
                        [model]="model.children"
@@ -463,6 +464,7 @@
                    </ngx-section>
                 </div>
                 <div *ngSwitchDefault>
+                  index {{index}}
                   <ngx-input
                     [type]="model.inputType"
                     [hint]="model.name"
