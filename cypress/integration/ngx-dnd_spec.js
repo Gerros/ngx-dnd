@@ -556,7 +556,7 @@ describe('Demo', () => {
       cy
         .get('@target')
         .find('.ngx-dnd-item')
-        .should(matchOrder(['A String']));
+        .should(matchOrder(['index 0 A String']));
     });
 
     it('should add a section item', () => {
@@ -570,7 +570,7 @@ describe('Demo', () => {
       cy
         .get('@target')
         .find('.ngx-dnd-item')
-        .should(matchOrder(['Section', 'A String']));
+        .should(matchOrder(['Section index 0', 'index 1 A String']));
 
       cy
         .get('@target')
@@ -583,7 +583,7 @@ describe('Demo', () => {
       cy
         .get('@targetSectionContainer')
         .find('.ngx-dnd-item')
-        .should(matchOrder(['A Number']));
+        .should(matchOrder(['index 0 A Number']));
     });
   });
 });
